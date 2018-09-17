@@ -4,7 +4,7 @@ sudo: false
 language: python
 
 python:
-    - '3.6'
+  - '3.6'
 
 # Enable 3.7 without globally enabling sudo and dist: xenial for other build jobs
 # https://github.com/travis-ci/travis-ci/issues/9815
@@ -15,8 +15,18 @@ matrix:
       sudo: true
 
 install:
-    - pip install tox-travis
+  - pip install tox-travis
 
 script: tox
 
 cache: pip
+
+deploy:
+  on:
+    python: '3.7'
+    tags: true
+  distributions: sdist bdist_wheel
+  provider: pypi
+  user: aptbosox
+  password:
+    secure: kOW5bACvD2Q8K2EElXVS2vXih49LAuapwMqi27HxcbvEW5gFotaJAEHNUET/DxXUWF5J0i8zvo2D+ndq5B4r8VZ965ZDV9rnr5J+hFAcomGxcToDmQ/Db5sUd2kQLXpK+izrthbWBpchlJx1rj5FbYZQxEsI9KjuV6H5KFwnGmWvbL/Lba4iLPjohchpgLvVKD6khlUsqMSAOsoH//cPQmy+AIupIQfP7PSGg7jnqlGIaLAeLe8hB1w0tQJ+1S3i+vT3qn16iz59AylH6ZvRXBNjjPhQrR7Xd/yxZ8BMd1C6RE7LLZHy1Fi1xhJUK/7rQ79ug/eY+/yuF4K6bRcSO5Q3WAkeqK/zC1gWspFip1R5laKW9VTHQCruJQ16yehB0GqU1vLwjU/hf8Ha3MDTtE3czh7DelPdVYBcvePumhINlV9Ojg6MSPYrZBm7v7v3KIt5WdonqLrnTdQ3LdzHal3BT3mZSOaeZBqMrEK6vtwEreN8VI3b1uQaN8rdVO+/XUb+f21xQcFYiW4gFfwLmkY5kxGwA7GyKpV8lvfwFFZ3Hu87g0Z6ljITC4Gy5ZhBfw0XAwuy0nS49Wqh3oZfPvSqrd2gni4HaWRLm1XqYYrdmIH/8FpiHlnoApD6EK+nYflpHIbvtXKBNFbg+u537kkxR3qK+zygHfY2O0+qRqc=
