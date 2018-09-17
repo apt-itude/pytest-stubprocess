@@ -20,7 +20,7 @@ setup(
     maintainer_email='aptbosox@gmail.com',
     license='MIT',
     url='https://github.com/aptbosox/pytest-stubprocess',
-    description='Mock out subprocesses to use stub implementations in Python',
+    description='Provide stub implementations for subprocesses in Python tests',
     long_description=read('README.rst'),
     py_modules=['pytest_stubprocess'],
     python_requires='>=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*',
@@ -30,7 +30,7 @@ setup(
         'pytest-mock',
     ],
     classifiers=[
-        'Development Status :: 4 - Beta',
+        'Development Status :: 3 - Alpha',
         'Framework :: Pytest',
         'Intended Audience :: Developers',
         'Topic :: Software Development :: Testing',
@@ -43,8 +43,7 @@ setup(
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: Implementation :: CPython',
-        'Programming Language :: Python :: Implementation :: PyPy',
-        'Operating System :: OS Independent',
+        'Operating System :: POSIX',
         'License :: OSI Approved :: MIT License',
     ],
     entry_points={

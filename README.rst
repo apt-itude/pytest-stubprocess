@@ -14,10 +14,6 @@ pytest-stubprocess
     :target: https://travis-ci.org/aptbosox/pytest-stubprocess
     :alt: See Build Status on Travis CI
 
-.. image:: https://ci.appveyor.com/api/projects/status/github/aptbosox/pytest-stubprocess?branch=master
-    :target: https://ci.appveyor.com/project/aptbosox/pytest-stubprocess/branch/master
-    :alt: See Build Status on AppVeyor
-
 Mock out subprocesses to use stub implementations in Python
 
 ----
