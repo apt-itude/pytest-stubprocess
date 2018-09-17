@@ -76,7 +76,7 @@ class TestStderr:
         assert stderr == ""
 
 
-class TestExitHandling:
+class TestResults:
 
     @pytest.fixture(autouse=True)
     def exe(self, stubprocess):
